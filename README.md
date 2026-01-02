@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
+# Dev Design Studio 🚀  
+Modern Creative Agency Website
 
-## Project info
+🔗 **Live Website:** https://devdesignstudio.vercel.app/
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 📌 Project Overview
 
-There are several ways of editing your application.
+**Dev Design Studio** is a modern, visually engaging **creative agency website** designed to showcase services, portfolio, and brand identity.  
+The main focus of this project is to deliver a **smooth user experience**, **high-quality animations**, and a **clean, premium UI**.
 
-**Use Lovable**
+The website is built using **TypeScript** and **GSAP (GreenSock Animation Platform)** to create smooth animations and scroll-based interactions that enhance user engagement.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🧱 Website Structure / Pages
 
-**Use your preferred IDE**
+This website follows a **single-page, scroll-based agency layout**, divided into multiple animated sections:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Home / Hero Section**  
+   - Eye-catching hero layout  
+   - Animated headings and elements  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. **About Section**  
+   - Agency introduction  
+   - Mission & creative approach  
 
-Follow these steps:
+3. **Services Section**  
+   - Service cards  
+   - Scroll-triggered animations  
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+4. **Portfolio / Work Section**  
+   - Project showcase  
+   - Parallax & reveal effects  
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+5. **Contact / Call-To-Action Section**  
+   - Contact information or CTA  
+   - Smooth entry animations  
 
-# Step 3: Install the necessary dependencies.
-npm i
+> ⚡ The website is a single page but contains multiple animated sections.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 🧠 Tech Stack
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+| Technology | Purpose |
+|-----------|--------|
+| **Next.js / React** | Frontend framework |
+| **TypeScript** | Type-safe and scalable code |
+| **GSAP (GreenSock)** | Advanced animations |
+| **GSAP ScrollTrigger** | Scroll-based animation control |
+| **Smooth Scrolling** | Enhanced user experience |
+| **CSS / Tailwind / SCSS** | Styling |
+| **Vercel** | Deployment & hosting |
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## ✨ Animations (GSAP)
 
-## What technologies are used for this project?
+GSAP is used to create modern and smooth animations throughout the website, including:
 
-This project is built with:
+- Fade-in and slide-up effects  
+- Stagger animations for text and cards  
+- Scroll-based reveal animations  
+- Timeline-based animation sequences  
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Example (Concept Code)
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```ts
+gsap.from(".section", {
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".section",
+    start: "top 80%",
+  },
+});

@@ -205,6 +205,14 @@
   .section-padding {
     @apply px-6 md:px-12 lg:px-24 py-20 md:py-32;
   }
+
+  .perspective {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
 }
 
 @keyframes marquee {
@@ -218,4 +226,24 @@
 
 .animate-marquee {
   animation: marquee 20s linear infinite;
+}
+
+/* Text Reveal Mask */
+@keyframes reveal-mask {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Smooth scrolling for horizontal sections */
+.horizontal-scroll {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.horizontal-scroll > * {
+  scroll-snap-align: start;
 }
